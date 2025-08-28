@@ -252,12 +252,12 @@ hr {
   left: 0.5%;
 }
 
-.services {
+.capabilities {
   display: flex;
   margin-top: 118px;
 }
 
-.services h2.services_title {
+.capabilities h2.capabilities_title {
   width: 354px;
   height: 25px;
   color: var(--subprimary);
@@ -267,11 +267,11 @@ hr {
   text-transform: uppercase;
 }
 
-.services_title::after {
+.capabilities_title::after {
   margin-top: 10px;
 }
 
-.services>p {
+.capabilities>p {
   font-family: var(--font-family);
   font-size: 11px;
   letter-spacing: 0.02em;
@@ -280,7 +280,7 @@ hr {
   line-height: 19px;
 }
 
-.services>button {
+.capabilities>button {
   width: 150px;
   height: 40px;
   background: var(--primary);
@@ -288,6 +288,36 @@ hr {
   text-transform: uppercase;
   color: white;
   margin-left: 35px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  margin-top: 75px;
+}
+
+.services .card {
+  border: 1px solid #e6e6e6;
+  padding: 38px 16px 38px 23px;
+}
+
+.services .card h3 {
+  font-family: var(--font-family-700);
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #48555b;
+  margin-top: 22px;
+  line-height: 24px;
+}
+
+.services .card p {
+  font-family: var(--font-family);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: var(--subprimary);
+  margin-top: 13px;
+  line-height: 23px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -309,6 +339,14 @@ hr {
   .about .text {
     width: 100%;
   }
+
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .services .card:nth-child(3) {
+    grid-column: span 2;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -325,22 +363,22 @@ hr {
     margin-top: 100px;
   }
 
-  .services {
+  .capabilities {
     flex-direction: column;
     align-items: center;
   }
 
-  .services>p {
+  .capabilities>p {
     width: auto;
     margin-top: 54px;
   }
 
-  .services>button {
+  .capabilities>button {
     margin-left: 0;
     margin-top: 20px;
   }
 
-  .services_title {
+  .capabilities_title {
     width: auto !important;
   }
 }
@@ -348,5 +386,13 @@ hr {
 @media screen and (max-width: 600px) {
   .container {
     width: 90%;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .services .card {
+    grid-column: span 3 !important;
   }
 }
