@@ -382,6 +382,11 @@ hr {
   padding-left: 16px;
 }
 
+.footer {
+  display: flex;
+  background: #141a20;
+}
+
 @media screen and (max-width: 1440px) {
   .container {
     width: 80%;
