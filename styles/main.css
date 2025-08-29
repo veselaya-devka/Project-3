@@ -51,8 +51,9 @@
 
 html {
   box-sizing: border-box;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
+
 
 * {
   margin: 0;
@@ -602,6 +603,18 @@ hr {
 }
 
 @media screen and (max-width: 450px) {
+  .about_title {
+    margin-top: 150px;
+  }
+
+  .container>div {
+    width: 90%;
+  }
+
+  .center>h1 {
+    font-size: 3rem;
+  }
+
   .imgs {
     gap: 5%;
     width: inherit;
