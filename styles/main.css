@@ -196,6 +196,9 @@ button:hover {
   padding: 24px 0 24px 31px;
 }
 
+.navs>ul li:first-child a {
+  padding-left: 0;
+}
 
 .navs>ul li a:hover {
   color: var(--primary);
@@ -633,8 +636,17 @@ hr {
     justify-content: center;
   }
 
+  .signup>.container>.form>button,
+  .signup>.container>.form>input {
+    width: 100%;
+  }
+
   .signup>.container>.form>p {
     margin-right: 0;
+  }
+
+  .signup>.container>.form>input {
+    margin-top: 10px;
   }
 
   .getintouch>.container>h1 {
